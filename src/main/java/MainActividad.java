@@ -170,7 +170,7 @@ class ConexionBD {
         if (conn != null && !conn.isClosed()) conn.close();
     }
 
-    // --- NUEVOS MÉTODOS SOLICITADOS ---
+ 
 
     public void crearTablaEquipo(String nombreTabla) throws SQLException {
         String sql = "CREATE TABLE " + nombreTabla + " (" +
@@ -186,7 +186,7 @@ class ConexionBD {
         ejecutarInsertDeleteUpdate(sql);
     }
 
-    // --- MÉTODOS DE EJECUCIÓN ---
+   
 
     public ResultSet ejecutarSelect(String sql) throws SQLException {
         return conn.createStatement().executeQuery(sql);
@@ -197,4 +197,5 @@ class ConexionBD {
             return stmt.executeUpdate(sql);
         }
     }
+
 }
